@@ -1,6 +1,10 @@
 import { serve } from "bun";
 import index from "./index.html";
 
+import '@gravity-ui/uikit/styles/fonts.css';
+import '@gravity-ui/uikit/styles/styles.css';
+import "@gravity-ui/uikit/styles/variables.css";
+
 const server = serve({
   routes: {
     // Serve index.html for all unmatched routes.
