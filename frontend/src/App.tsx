@@ -1,22 +1,29 @@
-import { APITester } from "./APITester";
-import "./index.css";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+// import { Card, CardContent } from "@/components/ui/card";
 
-import logo from "./logo.svg";
-import reactLogo from "./react.svg";
+import { Terminal } from "lucide-react";
+import "./assets/css/index.css";
+
+import logo from "./assets/svg/logo.svg";
 
 export function App() {
   return (
-    <div className="app">
-      <div className="logo-container">
-        <img src={logo} alt="Bun Logo" className="logo bun-logo" />
-        <img src={reactLogo} alt="React Logo" className="logo react-logo" />
-      </div>
+    <div className="container mx-auto p-8 text-center relative z-10">
+      <div className="flex justify-center items-center gap-8 mb-8">
+        <img
+          src={logo}
+          alt="Bun Logo"
+          className="h-36 p-6 transition-all duration-300 hover:drop-shadow-[0_0_2em_#646cffaa] scale-120"
+        />
 
-      <h1>Bun + React</h1>
-      <p>
-        Edit <code>src/App.tsx</code> and save to test HMR
-      </p>
-      <APITester />
+        <Alert variant="default" className="max-w-sm">
+          <Terminal />
+          <AlertTitle>Heads up!</AlertTitle>
+          <AlertDescription>
+            You can add components and dependencies to your app using the cli.
+          </AlertDescription>
+        </Alert>
+      </div>
     </div>
   );
 }

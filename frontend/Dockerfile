@@ -10,7 +10,7 @@ RUN bun install --frozen-lockfile
 COPY . .
 
 # build React app into dist/
-RUN bun build ./src/index.html --outdir=dist --sourcemap --target=browser --minify
+RUN bun run build
 
 # ---------- Builder Stage ----------
 FROM caddy:builder AS builder
